@@ -1,15 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import EntradadeDados from './src/EntradaDeDados/index'
+import ExibeItens from './src/ExibeItens/index'
 
 export default function App() {
+
+
+  const [itens, setItens] = useState([])
+
+  function funcaoCadastrar (descricao, fabricante) {
+
+    const item = {descricao, fabricante}
+    setItens([...itens, item])
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <EntradadeDados funcaoCadastrar={ funcaoCadastrar }/>
+      <ExibeItens itens={itens}/>
     </View>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
