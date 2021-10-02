@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react'
-import { View, TextInput, Button, Text, FlatList } from 'react-native'
+import { View, TextInput, Button, Text, FlatList, StyleSheet} from 'react-native'
 
 class ExibeItens extends React.Component {
 
@@ -16,10 +15,10 @@ class ExibeItens extends React.Component {
                             renderItem={({ item }) => {
                                 return (
                                     <View>
-                                        <Text>
+                                        <Text style={styles.txtList}>
                                             {item.descricao}
                                         </Text>
-                                        <Text>
+                                        <Text style={styles.txtList}>
                                             {item.fabricante}
                                         </Text>
                                     </View>
@@ -28,24 +27,27 @@ class ExibeItens extends React.Component {
                             keyExtractor={(item, index) => index.toString()}
                         />
                         :
-                        <Text>
+                        <Text
+                        style={{color:'red'}}
+                        >
                             Nenhum item cadastrado
                         </Text>
-
                 }
 
-
             </View>
-
-
-
-
-
 
 
         )
     }
 
 }
+
+const styles = StyleSheet.create({
+    txtList: {
+        color: '#0079C8',
+        fontSize: 20,
+        textAlign: 'center',
+    },
+});
 
 export default ExibeItens;
