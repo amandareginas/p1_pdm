@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, TextInput, StyleSheet, Pressable, Text } from 'react-native'
 
+
 export default function EntradaDeDados({ funcaoCadastrar }) {
 
     const [descricao, setDescricao] = useState("")
