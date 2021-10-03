@@ -35,8 +35,8 @@ class ExibeItens extends React.Component {
 
         )
     }
-
 }
+
 
 const styles = StyleSheet.create({
     txtList: {

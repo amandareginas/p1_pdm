@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { View, TextInput, StyleSheet, Pressable, Text } from 'react-native'
 
