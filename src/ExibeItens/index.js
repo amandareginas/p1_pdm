@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, TextInput, Button, Text, FlatList, StyleSheet } from 'react-native'
+import { View, Text, FlatList, StyleSheet } from 'react-native'
 
 class ExibeItens extends React.Component {
 
@@ -28,7 +28,7 @@ class ExibeItens extends React.Component {
                         />
                         :
                         <Text style={{ color: 'red' }}>
-                            Nenhum item cadastrado
+                            Nenhum item cadastrado.
                         </Text>
                 }
             </View>

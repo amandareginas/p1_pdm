@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
-import {Text, View, Button, StyleSheet} from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import React, {useState} from 'react'
+import {View, StyleSheet} from 'react-native'
 import EntradadeDados from './src/EntradaDeDados/index'
 import ExibeItens from './src/ExibeItens/index'
 
 export default function App() {
-
 
   const [itens, setItens] = useState([])
 
