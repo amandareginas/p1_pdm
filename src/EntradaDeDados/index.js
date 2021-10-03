@@ -44,31 +44,26 @@ export default function EntradaDeDados({ funcaoCadastrar }) {
                 value={fabricante}
             />
 
-            <Pressable 
-            style={styles.buttonStyle} 
-            onPress={() => {
+            <Pressable
+                style={styles.buttonStyle}
+                onPress={() => {
                     funcaoCadastrar(descricao, fabricante)
                     limparCampos()
                 }
-            }>
+                }>
                 <Text style={styles.txtBtn}>CADASTRAR</Text>
             </Pressable>
 
             <Text style={styles.listTitle}>
                 Itens Cadastros
             </Text>
-            
+
 
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        marginHorizontal: 16,
-    },
     inputBox: {
         textAlign: 'center',
         width: 180,
